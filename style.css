@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "gotham-bold";
+  src: url("./assets/fonts/GothamBold.ttf");
+}
+@font-face {
+  font-family: "gotham-medium";
+  src: url("./assets/fonts/GothamMedium.ttf");
+}
+@font-face {
+  font-family: "gotham-light";
+  src: url("./assets/fonts/GothamLight.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.total-section {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.total-section > p {
+  font-family: "gotham-bold";
+  color: #1c1c1c;
+  margin-bottom: 25px;
+  font-size: 48px;
+}
+.total-section > p > span {
+  color: #114a8d;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.card {
+  width: 511px;
+  height: 330px;
+  margin: 15px;
+  border-radius: 8px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.card > p {
+  text-align: center;
+  font-family: "gotham-medium";
+  color: white;
+  font-size: 28px;
+}
+.yellow-text {
+  color: #ffc758;
+}
+.hover-details {
+  /* display: none; */
+  width: 100%;
+  position: absolute;
+  height: 294px;
+  background-image: linear-gradient(to bottom, #3b4179, #214c84);
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  right: 100%;
+  z-index: 1;
+  transition: 0.9s;
+}
+.hover-details > h2 {
+  width: 371px;
+  font-size: 32px;
+  text-align: center;
+  font-family: "gotham-bold";
+  margin-bottom: 13px;
+  color: white;
+}
+.hover-details > p {
+  width: 425px;
+  font-size: 20px;
+  font-family: "gotham-light";
+  color: #ffffff;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 400;
+}
+.card:hover .hover-details {
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.card:hover .title-hide {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 370px;
+    height: 250px;
+  }
+  .card > p {
+    font-size: 22px;
+  }
+  .total-section > p {
+    font-size: 38px;
+  }
+  .hover-details {
+    height: 210px;
+  }
+  .hover-details > h2 {
+    width: 300px;
+    font-size: 25px;
+  }
+  .hover-details > p {
+    width: 300px;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 450px;
+    height: 300px;
+  }
+  .total-section > p {
+    margin-bottom: 20px;
+  }
+  .card > p {
+    font-size: 28px;
+  }
+  .hover-details {
+    height: 260px;
+  }
+  .hover-details > h2 {
+    width: 360px;
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .hover-details > p {
+    width: 400px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .total-section {
+    padding: 20px;
+  }
+  .total-section > p {
+    margin-bottom: 15px;
+    font-size: 32px;
+  }
+  .card {
+    width: 100%;
+    height: 255px;
+    margin: 15px 0;
+    padding: 20px;
+  }
+  .card > p {
+    font-size: 22px;
+  }
+  .hover-details {
+    height: 215px;
+  }
+  .hover-details > h2 {
+    width: 300px;
+    font-size: 27px;
+    margin-bottom: 12px;
+  }
+  .hover-details > p {
+    width: 300px;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}
+@media screen and (max-width: 320px) {
+  .total-section {
+    padding: 20px 10px;
+  }
+  .total-section > p {
+    font-size: 30px;
+  }
+  .card {
+    margin: 12px 0;
+  }
+  .hover-details > h2 {
+    width: 250px;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .hover-details > p {
+    width: 250px;
+    font-size: 16px;
+  }
+  .total-section > p {
+    font-size: 30px;
+  }
+}
