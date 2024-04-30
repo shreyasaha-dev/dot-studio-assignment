@@ -49,6 +49,7 @@
   align-items: flex-end;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card > p {
@@ -74,7 +75,8 @@
   top: 100%;
   right: 100%;
   z-index: 1;
-  transition: 0.9s;
+  transition: 0.6s;
+  cursor: pointer;
 }
 .hover-details > h2 {
   width: 371px;
@@ -92,12 +94,37 @@
   line-height: 1.5;
   text-align: center;
   font-weight: 400;
+  position: relative;
 }
 .card:hover .hover-details {
   top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  right: 50%;
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+.card:hover .show-heading {
+  animation: showHeading 0.2s;
+}
+@keyframes showHeading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card:hover .show-sub-heading {
+  animation: showSubHeading 0.8s;
+}
+@keyframes showSubHeading {
+  0% {
+    top: 40px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 .card:hover .title-hide {
   display: none;
