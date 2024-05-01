@@ -48,8 +48,6 @@ cardData.forEach((card) => {
         rgba(0, 0, 0, 0.8) 85%
       ),
       url(${card.backgroundImage});
-    background-size: cover;
-    background-repeat: no-repeat;
   "
 >
   ${card.title}
