@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 .total-section {
-  padding: 40px 60px;
+  padding: 60px 60px 40px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +67,6 @@
   position: absolute;
   height: 294px;
   background-image: linear-gradient(to bottom, #3b4179, #214c84);
-  /* opacity: 0.9; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,6 +157,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .total-section {
+    padding: 50px 60px 40px 60px;
+  }
   .card {
     width: 450px;
     height: 300px;
@@ -183,7 +185,7 @@
 }
 @media screen and (max-width: 480px) {
   .total-section {
-    padding: 20px;
+    padding: 40px 20px;
   }
   .total-section > p {
     margin-bottom: 15px;
@@ -222,7 +224,7 @@
 }
 @media screen and (max-width: 320px) {
   .total-section {
-    padding: 20px 10px;
+    padding: 30px 10px;
   }
   .total-section > p {
     font-size: 30px;
